@@ -38,6 +38,6 @@ Import data into MALLET's internal format. E.g.,
 MALLET's `--output-doc-topics` option produces a tab-separated file with
 columns for document number, source (document filename), and a series
 of topic number/proportion column-pairs in no logical order. The script 
-[doctopic-matrix.py](https://gist.github.com/jrwiebe/b1340700c630f66d34dc)
+[doctopic-matrix.py](https://github.com/jrwiebe/WAHR/blob/master/doctopic-matrix.py)
 produces a CSV file with columns _docname_ and _topic1_, ..., _topicN_.
 This can then be more easily analyzed and visualized.
