@@ -466,9 +466,12 @@ function bubble(subsetIdx) {
 		.attr("height", diameter)
 		.attr("class", "bubble");
 
-	var arrObj = {
-		children: flatten(nestedData, subsetIdx)
-	}
+    var flatArr = flatten(nestedData, subsetIdx);
+    // Randomize array order to avoid concentric rings of same entity type
+    flatArr.sort(function() { return Math.random() - .5; });
+    var arrObj = {
+        children: flatArr
+    }
 
 	var node = svg.selectAll(".node")
 		.data(bubble.nodes(arrObj)			
